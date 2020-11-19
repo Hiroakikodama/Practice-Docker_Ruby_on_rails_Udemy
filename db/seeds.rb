@@ -9,6 +9,7 @@ if Rails.env == 'development'
   (1..50).each do |i|
     Board.create(name: "ユーザー#{i}", title: "タイトル#{i}", body: "本文#{i}")
   end
+#  開発環境のみで行いたいので、if Rails.env == developmentで条件を開発環境のみにしている。
 
   Tag.create([
     { name: 'Ruby' },
@@ -19,4 +20,3 @@ if Rails.env == 'development'
     { name: 'Javascript' },
   ])
 end
-#  開発環境のみで行いたいので、if Rails.env == developmentで条件を開発環境のみにしている。
